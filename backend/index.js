@@ -13,7 +13,7 @@ const db = mysql.createConnection({
 app.use(express.json())
 app.use(cors())
 app.get("/", (req,res)=>{
-    res.json("hello this is backend!")
+    res.json("Backend connection successfull!")
 })
 
 app.get("/menu", (req,res)=>{

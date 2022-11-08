@@ -26,6 +26,7 @@ useEffect(()=>{
                     {vare.cover && <img src={vare.cover} alt="" />}
                     <h1>{vare.title}</h1>
                     <p>{vare.desc}</p>
+                    <p>{vare.price}</p>
             </div>))}
         </div>
     )
