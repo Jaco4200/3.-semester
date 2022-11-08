@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+import {Link} from 'react-router-dom';
 import '../scss/style.scss'
 const Menu = () => {
 
@@ -9,7 +10,7 @@ const [vare,setVare] = useState ([])
 useEffect(()=>{
     const fetchAllMenu = async ()=>{
         try{
-            const res = await axios.get("http://localhost:8800/menu")
+            const res = await axios.get("http://localhost:8800/menu", vare)
             console.log(res);
             setVare(res.data); 
         }catch(err){
@@ -28,6 +29,7 @@ useEffect(()=>{
                     <p>{vare.desc}</p>
                     <p>{vare.price}</p>
             </div>))}
+            <button><Link to="/admin">knap</Link></button>
         </div>
     )
 }

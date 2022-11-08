@@ -30,6 +30,7 @@ app.post("/menu", (req,res)=>{
         req.body.title,
         req.body.desc,
         req.body.cover,
+        req.body.price
 ];
 
     db.query(q,[values], (err,data)=>{
