@@ -15,7 +15,7 @@ app.get("/", (req,res)=>{
 })
 
 app.get("/menu", (req,res)=>{
-    const q = "SELECT * FROM vare"
+    const q = "SELECT * FROM menu.vare"
     db.query(q,(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
