@@ -5,6 +5,7 @@ import Home from './pages/home';
 import Bekraft from './pages/bekraft';
 import Kontakt from './pages/kontakt';
 import Admin from './pages/admin';
+import '../src/scss/style.scss'
 function App() {
   return (
     <div className="App">

@@ -12,6 +12,8 @@ const db = mysql.createConnection({
 
 app.use(express.json())
 app.use(cors())
+const whitelist = ['http://localhost:3000']; // React app
+
 app.get("/", (req,res)=>{
     res.json("Backend connection successfull!")
 })
@@ -29,11 +31,20 @@ app.post("/menu", (req,res)=>{
         req.body.id,
         req.body.title,
         req.body.desc,
-        req.body.cover,
-        req.body.price
+        req.body.cover
 ];
 
     db.query(q,[values], (err,data)=>{
+        if (err) return res.json(err);
+        return res.json("book");
+    });
+});
+
+app.delete("menu/:id", (req,res)=>{
+    const vareid = req.params.id;
+    const q = "DELETE FROM menu.vare WHERE id = ?"
+    
+    db.query(q,[vareid], (err,data)=>{
         if (err) return res.json(err);
         return res.json("book");
     });
