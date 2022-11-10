@@ -19,28 +19,21 @@ useEffect(()=>{
     }
     fetchAllMenu()
 }, [])
-const handleDelete = async (id)=>{
-    try{
-        await axios.delete("http://localhost:8800/menu"+id)
-        window.location.reload()
-    }catch(err){
-        console.log(err)
-    }
-}
     return (
   
         <div className="vare">
             {vare.map(vare=>(
-                <div className="varer" key={vare.id}>
+                <div className="delete" key={vare.id}>
                     <div className="title"><h1>{vare.title}</h1></div>
                     <div className="desc"><p>{vare.desc}</p></div>
                     <div className="billede">{vare.cover && <img src={vare.cover} alt="" />}</div>
-                    <button className="delete" onClick={()=>handleDelete(vare.id)}>Delete</button>
                     <span>{vare.price}</span>
             </div>))}
             <button><Link to="/admin">knap</Link></button>
         </div>
     )
 }
-
 export default Menu
+export function vare() {
+    
+}

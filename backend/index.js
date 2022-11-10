@@ -40,7 +40,7 @@ app.post("/menu", (req,res)=>{
     });
 });
 
-app.delete("menu/:id", (req,res)=>{
+app.delete("/menu:id", (req,res)=>{
     const vareid = req.params.id;
     const q = "DELETE FROM menu.vare WHERE id = ?"
     
@@ -49,6 +49,7 @@ app.delete("menu/:id", (req,res)=>{
         return res.json("book");
     });
 });
+
 app.listen(8800, ()=>{
     console.log("loggessd")
 })

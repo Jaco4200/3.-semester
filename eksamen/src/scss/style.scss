@@ -1,14 +1,15 @@
 .vare{
     margin-top: 100px;
-    flex-direction: column;
     display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: aqua;
 }
 .varer{
     width: 500px;
     height: 100px;
     background-color: aliceblue;
     display: flex;
-    justify-content: space-between;
     img{
         align-items: flex-end;
     }
@@ -28,4 +29,50 @@ img{
     width: 100px;
     display: flex;
     justify-self: flex-end;
+}
+.delete{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15vh;
+}
+.title{
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    position: absolute;
+}
+.dk{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+
+}
+.knape{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    position: absolute;
+}
+.huh{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border: 1px dashed gray;
+}
+.yo{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.flexed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.added{
+    margin-top: 10px;
 }
