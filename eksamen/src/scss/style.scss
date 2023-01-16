@@ -1,8 +1,8 @@
 .vare{
     margin-top: 100px;
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
     background-color: aqua;
 }
 .varer{
@@ -21,7 +21,6 @@ h1{
 }
 .App{
     height: 100vh;
-    padding: 0 100px;
 
 }
 img{
@@ -31,16 +30,22 @@ img{
     justify-self: flex-end;
 }
 .delete{
-    margin-top: 50px;
     display: flex;
-    justify-content: center;
     width: 100%;
-    height: 15vh;
+    height:200px;
 }
 .title{
     display: flex;
     align-self: flex-start;
     justify-content: center;
+    margin-top: 7px;
+}
+.pris{
+    margin-top: 7px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 22%;
     position: absolute;
 }
 .dk{
@@ -75,4 +80,319 @@ img{
 }
 .added{
     margin-top: 10px;
+}
+.column1 {
+    float: left;
+    width: 33.33%;
+    height: 5rem;
+    text-align: left;
+    background-color: #950000;
+    color: #FFD700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+body{
+    font-family: 'montserrat';
+}
+
+nav {
+    background-color: #950000;
+    color: #FFD700;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav .mainMenu { 
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+nav .mainMenu li a:hover {
+     background-color: violet;
+}
+
+nav .openMenu {
+    font-size: 1.2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu, .icons i{
+    font-size: 1.5rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .logo{
+    margin: 6px;
+    font-size: 1.0rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.column2 {
+    float: left;
+    width: 33.33%;
+    height: 5rem;
+    text-align: center;
+    background-color: #950000;
+    color: #FFD700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column3 {
+    text-align: right;
+    float: left;
+    width: 33.33%;
+    height: 5rem;
+    background-color: #950000;
+    color: #FFD700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.fa {
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.fa-facebook :hover {
+    color: antiquewhite;
+}
+
+a {
+    color: yellow;
+}
+
+a:hover {
+    color: #AFDB56;
+}
+
+.row {
+    background-color: #950000;
+}
+
+.thai {
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    color: #FFD700;
+    padding-top: 15px;
+}
+
+.mediaikon {
+    text-align: center;
+    display: none;
+    color: #FFD700;
+}
+
+.mediacolumn1 {
+    display: none;
+    text-align: left;
+    font-size: 12px;
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 100px;
+    background-color: #950000;
+    color: #FFD700;
+}
+
+.mediacolumn2 {
+    display: none;
+    text-align: center;
+    font-size: 12px;
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 100px;
+    background-color: #950000;
+    color: #FFD700;
+}
+
+.mediacolumn3 {
+    display: none;
+    text-align: right;
+    font-size: 12px;
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 100px;
+    background-color: #950000;
+    color: #FFD700;
+}
+.forret{
+    width: 97%;
+    height: 16%;
+    border:0;
+    border-bottom: 0.5px solid #950000;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    background-color: aliceblue;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+.retter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22%;
+    height: 40vh;
+    border-radius: 6%;
+    background-color: aliceblue;
+}
+.retten{
+    text-align: center;
+    font-size: 25px;
+}
+.desc{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    max-width: fit-content;
+    width: 22%;
+    margin-top: 40px;
+}
+.billede{
+    display: flex;
+    position: absolute;
+    margin-left: 23%;
+    width: 12%;
+    height: 16%;
+    background-color:#bda8a8;
+}
+.menu{
+    width: 35%;
+    background-color: #ddd6d6;
+}
+.kurv{
+    margin-top: 0px;
+    width: 22%;
+    height: 50vh;
+    background-color: #950000;
+}
+.kurvicon{
+    width: 10%;
+    height: 10%;
+    background-color: darkblue;
+    position: absolute;
+    margin-left: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.viskurv{
+    width: 22%;
+    height: inherit;
+    position: absolute;
+    margin-top: 6%;
+    background-color: #AFDB56;
+}
+@media screen and (max-width: 600px) {
+    .thai {
+        display: block;
+    }
+    .mediaikon {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+    .mediacolumn2 {
+        display: block;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-top: 0px;
+        height: 70px;
+    }
+    .column2 {
+        display: none;
+    }
+    .mediacolumn1 {
+        display: block;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-top: 0px;
+        height: 70px;
+    }
+    .column1 {
+        display: none;
+    }
+    .mediacolumn3 {
+        display: block;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-top: 0px;
+        height: 70px;
+    }
+    .column3 {
+        display: none;
+    }
+    .mediarow{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    nav .mainMenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #950000;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .mainMenu .closeMenu{
+         display: block;
+         position: absolute;
+         top: 20px;
+         right: 20px;
+    }
+
+    nav .openMenu {
+        display: block; 
+    }
+
+    nav .mainMenu li a:hover {
+        background: none;
+        color:aquamarine;
+        font-size: 0.8rem;
+    }
+
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
 }

@@ -3,12 +3,12 @@ import { useState } from "react";
 import { useEffect } from "react";
 import '../scss/style.scss'
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 const Admin = () => {
     const [input, setInput] = useState({
         id: null,
         title: "",
-        desc: "",
+        besk: "",
         cover: "",
     });
     const [vare,setVare] = useState ([])
@@ -39,7 +39,7 @@ useEffect(()=>{
     }
     const handleDelete = async (id)=>{
         try{
-            await axios.delete("http://localhost:8800/menu"+id)
+            await axios.delete(`http://localhost:8800/menu${id}`)
             window.location.reload()
         }catch(err){
             console.log(err)
@@ -53,7 +53,8 @@ useEffect(()=>{
         <h1>Add new item</h1>
         <input type="number" placeholder="ID" onChange={handleChange} name="id"></input>
         <input type="text" placeholder="title" onChange={handleChange} name="title"></input>
-        <input type="text" placeholder="desc" onChange={handleChange} name="desc"></input>
+        <input type="number" placeholder="pris" onChange={handleChange} name="pris"></input>
+        <input type="text" placeholder="desc" onChange={handleChange} name="besk"></input>
         <input type="text" placeholder="cover" onChange={handleChange} name="cover"></input>
         <button className="added" onClick={handleClick}>add</button></div>
         <div className="delete">
@@ -62,6 +63,7 @@ useEffect(()=>{
                 <div className="yo">vare id:{vare.id}</div>
                 <div className="title"><h1 className="dk">{vare.title}</h1></div>
                 <button className="knape" onClick={()=>handleDelete(vare.id)}>Delete</button>
+                <button className="update"><Link to={`/update/${vare.id}`}>update</Link></button>
                 </div>))}</div>
         </div>
         
